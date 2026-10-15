@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg-primary: #F7F7F5;
+  --color-text-main: #171717;
+  --color-text-secondary: #686868;
+  --color-accent-red: #C62828;
+  --color-deep-crimson: #8F1717;
+  --color-accent-yellow: #F2C94C;
+  --color-bg-dark: #171717;
+  --color-text-dark: #F7F7F5;
+  --color-border-divider: #E2E2DE;
+  --color-card-bg: #FFFFFF;
+
+  --font-display: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --theme-bg: #F7F7F5;
+  --theme-surface: #FFFFFF;
+  --theme-subtle: #EFEFEA;
+  --theme-text-main: #171717;
+  --theme-text-secondary: #686868;
+  --theme-border: #E2E2DE;
+}
+
+html.dark {
+  --theme-bg: #0C0C0E;
+  --theme-surface: #151518;
+  --theme-subtle: #1E1E23;
+  --theme-text-main: #F7F7F5;
+  --theme-text-secondary: #9E9E98;
+  --theme-border: #28282E;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--theme-bg);
+    color: var(--theme-text-main);
+    letter-spacing: -0.011em;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  body {
+    background-color: var(--theme-bg);
+    color: var(--theme-text-main);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Subtle architectural grid pattern for townhouse.dev aesthetic */
+.tech-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(226, 226, 222, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 226, 222, 0.5) 1px, transparent 1px);
+}
+
+html.dark .tech-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.tech-grid-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C62828;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8F1717;
+}
+
+/* Selection */
+::selection {
+  background-color: #C62828;
+  color: #FFFFFF;
+}

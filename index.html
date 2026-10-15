@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INTERO FEST ’26 | AIML & Cyber Department | Sree Sakthi Engineering College</title>
+    <meta name="description" content="Official website for INTERO FEST ’26 — One-Day National-Level Technical Symposium presented by the AIML & Cyber Department of Sree Sakthi Engineering College, Karamadai, Coimbatore. October 31, 2026." />
+    <meta name="theme-color" content="#F7F7F5" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="INTERO FEST ’26 | One-Day National-Level Technical Symposium" />
+    <meta property="og:description" content="Presented by AIML & Cyber Department, Sree Sakthi Engineering College. 3 Featured Events: Beat the Bot, The Last Artifact, IPL Auction. Joining Code: SSEC101." />
+    <meta property="og:image" content="/images/intero-fest-poster.jpg" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23171717'/><path d='M16 6a6 6 0 0 0-4 10.47V19a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.53A6 6 0 0 0 16 6z' fill='%23F2C94C'/><rect x='13' y='22' width='6' height='2' rx='1' fill='%23C62828'/><circle cx='16' cy='12' r='2' fill='%23C62828'/></svg>" />
+  </head>
+  <body class="bg-[#F7F7F5] text-[#171717] antialiased selection:bg-[#C62828] selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
